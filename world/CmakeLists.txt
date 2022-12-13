@@ -1,0 +1,3 @@
+project(WORLD)
+add_executable(WORLD
+        worldMain.cpp world.cpp world.h)
