@@ -1,9 +1,0 @@
-# ninja log v5
-1	118	6926393861876580	worldBin/CMakeFiles/WORLD.dir/worldMain.cpp.obj	d3ce10973b624159
-3	339	6926393864076197	worldBin/CMakeFiles/WORLD.dir/world.cpp.obj	1ddbb0e438b6ed94
-341	501	6926393865656326	worldBin/WORLD.exe	9623c06d4e65f8bb
-1	68	6926394100695058	helloBin/CMakeFiles/HELLO.dir/helloMain.cpp.obj	fe5774658789f218
-4	339	6926394103404684	helloBin/CMakeFiles/HELLO.dir/hello.cpp.obj	84e858426cfe62b8
-339	481	6926394104801569	helloBin/HELLO.exe	255029fff77391df
-1	303	6926394987051843	libBin/CMakeFiles/LIB.dir/LibTest.cpp.obj	70248ac2872ae632
-303	377	6926394987798304	libBin/libLIB.a	1287263d4dafd08c

@@ -1,4 +1,4 @@
-E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=E:/Code/CodeApp/jetbrain/apps/CLion/ch-0/223.7571.171/bin/ninja/win/ninja.exe -G Ninja -S E:\Code\Codes\cpp\cmakeTest -B E:\Code\Codes\cpp\cmakeTest\cmake-build-debug
+E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Release -DCMAKE_MAKE_PROGRAM=E:/Code/CodeApp/jetbrain/apps/CLion/ch-0/223.7571.171/bin/ninja/win/ninja.exe -G Ninja -S E:\Code\Codes\cpp\cmakeTest -B E:\Code\Codes\cpp\cmakeTest\cmake-build-release
 -- The C compiler identification is GNU 11.2.0
 -- The CXX compiler identification is GNU 11.2.0
 -- Detecting C compiler ABI info
@@ -13,4 +13,4 @@ E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.ex
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: E:/Code/Codes/cpp/cmakeTest/cmake-build-debug
+-- Build files have been written to: E:/Code/Codes/cpp/cmakeTest/cmake-build-release

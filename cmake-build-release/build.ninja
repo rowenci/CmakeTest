@@ -12,7 +12,7 @@
 
 # =============================================================================
 # Project: cmakeTest
-# Configurations: Debug
+# Configurations: Release
 # =============================================================================
 
 #############################################
@@ -24,7 +24,7 @@ ninja_required_version = 1.5
 #############################################
 # Set configuration variable for custom commands.
 
-CONFIGURATION = Debug
+CONFIGURATION = Release
 # =============================================================================
 # Include auxiliary files.
 
@@ -39,13 +39,13 @@ include CMakeFiles/rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = E$:/Code/Codes/cpp/cmakeTest/cmake-build-debug/
+cmake_ninja_workdir = E$:/Code/Codes/cpp/cmakeTest/cmake-build-release/
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-debug && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-release && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -56,7 +56,7 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-debug && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SE:\Code\Codes\cpp\cmakeTest -BE:\Code\Codes\cpp\cmakeTest\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-release && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SE:\Code\Codes\cpp\cmakeTest -BE:\Code\Codes\cpp\cmakeTest\cmake-build-release"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -77,17 +77,17 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_HELLO: phony || helloBin/CMakeFiles/HELLO.dir
 
-build helloBin/CMakeFiles/HELLO.dir/helloMain.cpp.obj: CXX_COMPILER__HELLO_Debug E$:/Code/Codes/cpp/cmakeTest/hello/helloMain.cpp || cmake_object_order_depends_target_HELLO
+build helloBin/CMakeFiles/HELLO.dir/helloMain.cpp.obj: CXX_COMPILER__HELLO_Release E$:/Code/Codes/cpp/cmakeTest/hello/helloMain.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = helloBin\CMakeFiles\HELLO.dir\helloMain.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   OBJECT_DIR = helloBin\CMakeFiles\HELLO.dir
   OBJECT_FILE_DIR = helloBin\CMakeFiles\HELLO.dir
   TARGET_COMPILE_PDB = helloBin\CMakeFiles\HELLO.dir\
   TARGET_PDB = helloBin\HELLO.pdb
 
-build helloBin/CMakeFiles/HELLO.dir/hello.cpp.obj: CXX_COMPILER__HELLO_Debug E$:/Code/Codes/cpp/cmakeTest/hello/hello.cpp || cmake_object_order_depends_target_HELLO
+build helloBin/CMakeFiles/HELLO.dir/hello.cpp.obj: CXX_COMPILER__HELLO_Release E$:/Code/Codes/cpp/cmakeTest/hello/hello.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = helloBin\CMakeFiles\HELLO.dir\hello.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   OBJECT_DIR = helloBin\CMakeFiles\HELLO.dir
   OBJECT_FILE_DIR = helloBin\CMakeFiles\HELLO.dir
   TARGET_COMPILE_PDB = helloBin\CMakeFiles\HELLO.dir\
@@ -101,8 +101,8 @@ build helloBin/CMakeFiles/HELLO.dir/hello.cpp.obj: CXX_COMPILER__HELLO_Debug E$:
 #############################################
 # Link the executable helloBin\HELLO.exe
 
-build helloBin/HELLO.exe: CXX_EXECUTABLE_LINKER__HELLO_Debug helloBin/CMakeFiles/HELLO.dir/helloMain.cpp.obj helloBin/CMakeFiles/HELLO.dir/hello.cpp.obj
-  FLAGS = -g
+build helloBin/HELLO.exe: CXX_EXECUTABLE_LINKER__HELLO_Release helloBin/CMakeFiles/HELLO.dir/helloMain.cpp.obj helloBin/CMakeFiles/HELLO.dir/hello.cpp.obj
+  FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = helloBin\CMakeFiles\HELLO.dir
   POST_BUILD = cd .
@@ -117,7 +117,7 @@ build helloBin/HELLO.exe: CXX_EXECUTABLE_LINKER__HELLO_Debug helloBin/CMakeFiles
 # Utility command for edit_cache
 
 build helloBin/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-debug\helloBin && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-release\helloBin && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -128,7 +128,7 @@ build helloBin/edit_cache: phony helloBin/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build helloBin/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-debug\helloBin && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SE:\Code\Codes\cpp\cmakeTest -BE:\Code\Codes\cpp\cmakeTest\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-release\helloBin && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SE:\Code\Codes\cpp\cmakeTest -BE:\Code\Codes\cpp\cmakeTest\cmake-build-release"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -149,17 +149,17 @@ build helloBin/rebuild_cache: phony helloBin/CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_WORLD: phony || worldBin/CMakeFiles/WORLD.dir
 
-build worldBin/CMakeFiles/WORLD.dir/worldMain.cpp.obj: CXX_COMPILER__WORLD_Debug E$:/Code/Codes/cpp/cmakeTest/world/worldMain.cpp || cmake_object_order_depends_target_WORLD
+build worldBin/CMakeFiles/WORLD.dir/worldMain.cpp.obj: CXX_COMPILER__WORLD_Release E$:/Code/Codes/cpp/cmakeTest/world/worldMain.cpp || cmake_object_order_depends_target_WORLD
   DEP_FILE = worldBin\CMakeFiles\WORLD.dir\worldMain.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   OBJECT_DIR = worldBin\CMakeFiles\WORLD.dir
   OBJECT_FILE_DIR = worldBin\CMakeFiles\WORLD.dir
   TARGET_COMPILE_PDB = worldBin\CMakeFiles\WORLD.dir\
   TARGET_PDB = worldBin\WORLD.pdb
 
-build worldBin/CMakeFiles/WORLD.dir/world.cpp.obj: CXX_COMPILER__WORLD_Debug E$:/Code/Codes/cpp/cmakeTest/world/world.cpp || cmake_object_order_depends_target_WORLD
+build worldBin/CMakeFiles/WORLD.dir/world.cpp.obj: CXX_COMPILER__WORLD_Release E$:/Code/Codes/cpp/cmakeTest/world/world.cpp || cmake_object_order_depends_target_WORLD
   DEP_FILE = worldBin\CMakeFiles\WORLD.dir\world.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   OBJECT_DIR = worldBin\CMakeFiles\WORLD.dir
   OBJECT_FILE_DIR = worldBin\CMakeFiles\WORLD.dir
   TARGET_COMPILE_PDB = worldBin\CMakeFiles\WORLD.dir\
@@ -173,8 +173,8 @@ build worldBin/CMakeFiles/WORLD.dir/world.cpp.obj: CXX_COMPILER__WORLD_Debug E$:
 #############################################
 # Link the executable worldBin\WORLD.exe
 
-build worldBin/WORLD.exe: CXX_EXECUTABLE_LINKER__WORLD_Debug worldBin/CMakeFiles/WORLD.dir/worldMain.cpp.obj worldBin/CMakeFiles/WORLD.dir/world.cpp.obj
-  FLAGS = -g
+build worldBin/WORLD.exe: CXX_EXECUTABLE_LINKER__WORLD_Release worldBin/CMakeFiles/WORLD.dir/worldMain.cpp.obj worldBin/CMakeFiles/WORLD.dir/world.cpp.obj
+  FLAGS = -O3 -DNDEBUG
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = worldBin\CMakeFiles\WORLD.dir
   POST_BUILD = cd .
@@ -189,7 +189,7 @@ build worldBin/WORLD.exe: CXX_EXECUTABLE_LINKER__WORLD_Debug worldBin/CMakeFiles
 # Utility command for edit_cache
 
 build worldBin/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-debug\worldBin && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-release\worldBin && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -200,7 +200,7 @@ build worldBin/edit_cache: phony worldBin/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build worldBin/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-debug\worldBin && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SE:\Code\Codes\cpp\cmakeTest -BE:\Code\Codes\cpp\cmakeTest\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-release\worldBin && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SE:\Code\Codes\cpp\cmakeTest -BE:\Code\Codes\cpp\cmakeTest\cmake-build-release"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -221,9 +221,9 @@ build worldBin/rebuild_cache: phony worldBin/CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_LIB: phony || libBin/CMakeFiles/LIB.dir
 
-build libBin/CMakeFiles/LIB.dir/LibTest.cpp.obj: CXX_COMPILER__LIB_Debug E$:/Code/Codes/cpp/cmakeTest/lib/LibTest.cpp || cmake_object_order_depends_target_LIB
+build libBin/CMakeFiles/LIB.dir/LibTest.cpp.obj: CXX_COMPILER__LIB_Release E$:/Code/Codes/cpp/cmakeTest/lib/LibTest.cpp || cmake_object_order_depends_target_LIB
   DEP_FILE = libBin\CMakeFiles\LIB.dir\LibTest.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
+  FLAGS = -O3 -DNDEBUG -fdiagnostics-color=always
   OBJECT_DIR = libBin\CMakeFiles\LIB.dir
   OBJECT_FILE_DIR = libBin\CMakeFiles\LIB.dir
   TARGET_COMPILE_PDB = libBin\CMakeFiles\LIB.dir\LIB.pdb
@@ -237,8 +237,8 @@ build libBin/CMakeFiles/LIB.dir/LibTest.cpp.obj: CXX_COMPILER__LIB_Debug E$:/Cod
 #############################################
 # Link the static library libBin\libLIB.a
 
-build libBin/libLIB.a: CXX_STATIC_LIBRARY_LINKER__LIB_Debug libBin/CMakeFiles/LIB.dir/LibTest.cpp.obj
-  LANGUAGE_COMPILE_FLAGS = -g
+build libBin/libLIB.a: CXX_STATIC_LIBRARY_LINKER__LIB_Release libBin/CMakeFiles/LIB.dir/LibTest.cpp.obj
+  LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
   OBJECT_DIR = libBin\CMakeFiles\LIB.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
@@ -251,7 +251,7 @@ build libBin/libLIB.a: CXX_STATIC_LIBRARY_LINKER__LIB_Debug libBin/CMakeFiles/LI
 # Utility command for edit_cache
 
 build libBin/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-debug\libBin && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-release\libBin && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -262,7 +262,7 @@ build libBin/edit_cache: phony libBin/CMakeFiles/edit_cache.util
 # Utility command for rebuild_cache
 
 build libBin/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-debug\libBin && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SE:\Code\Codes\cpp\cmakeTest -BE:\Code\Codes\cpp\cmakeTest\cmake-build-debug"
+  COMMAND = cmd.exe /C "cd /D E:\Code\Codes\cpp\cmakeTest\cmake-build-release\libBin && E:\Code\CodeApp\jetbrain\apps\CLion\ch-0\223.7571.171\bin\cmake\win\bin\cmake.exe --regenerate-during-build -SE:\Code\Codes\cpp\cmakeTest -BE:\Code\Codes\cpp\cmakeTest\cmake-build-release"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -290,28 +290,28 @@ build libLIB.a: phony libBin/libLIB.a
 # =============================================================================
 
 #############################################
-# Folder: E:/Code/Codes/cpp/cmakeTest/cmake-build-debug
+# Folder: E:/Code/Codes/cpp/cmakeTest/cmake-build-release
 
 build all: phony helloBin/all worldBin/all libBin/all
 
 # =============================================================================
 
 #############################################
-# Folder: E:/Code/Codes/cpp/cmakeTest/cmake-build-debug/helloBin
+# Folder: E:/Code/Codes/cpp/cmakeTest/cmake-build-release/helloBin
 
 build helloBin/all: phony helloBin/HELLO.exe
 
 # =============================================================================
 
 #############################################
-# Folder: E:/Code/Codes/cpp/cmakeTest/cmake-build-debug/libBin
+# Folder: E:/Code/Codes/cpp/cmakeTest/cmake-build-release/libBin
 
 build libBin/all: phony libBin/libLIB.a
 
 # =============================================================================
 
 #############################################
-# Folder: E:/Code/Codes/cpp/cmakeTest/cmake-build-debug/worldBin
+# Folder: E:/Code/Codes/cpp/cmakeTest/cmake-build-release/worldBin
 
 build worldBin/all: phony worldBin/WORLD.exe
 
